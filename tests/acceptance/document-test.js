@@ -19,10 +19,10 @@ module('Acceptance - Document', {
 test("should start with a new document to edit", function(assert) {
   assert.expect(2);
 
-  visit('/');
+  visit('/')
   andThen(function() {
     assert.ok(find('textarea').length, "document edit pane is open");
-    assert.ok(find('section:contains("New Document")').length, "document is new");
+    assert.ok(find('section:contains("New Document!")').length, "document is new");
   });
 });
 
